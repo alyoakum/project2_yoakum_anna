@@ -14,6 +14,46 @@ html {
 }
 
 
+/* IMAGE GALLERY */
+
+.gallery-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+	justify-content: center;
+	align-content: space-around;
+}
+
+/* Create four equal columns that sits next to each other */
+.gallery-column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.gallery-column img {
+  margin-top: 8px;
+	width: 100%;
+	height: auto;
+  vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .gallery-column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .gallery-column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
 
 
 body {
@@ -23,7 +63,7 @@ body {
 	padding: 0px;
 }
 
-#home, #about, #work, {
+#home, #about, #work {
   height: 100%;
 	width: 100%;
 	max-width: 480px;
@@ -59,6 +99,7 @@ body {
   padding: 20px 20px;
   border-right: 1px solid #f4f4f4;
   text-decoration: none;
+	color: #760F65;
 }
 
 .header li a:hover,
@@ -66,6 +107,9 @@ body {
   background-color: #f4f4f4;
 }
 
+.header li a:visited {
+	color: gray;
+}
 .header .logo {
   display: block;
   float: left;
@@ -303,7 +347,7 @@ h1 {
 
 .about-text {
   float: left;
-  margin: -70px 20px 0px 20px;
+  margin: -50px 20px 0px 20px;
   max-width: 305px;
   background-color: #EFF0F0;
   font-family: futura-pt, sans-serif;
@@ -340,6 +384,44 @@ p {
 	color: #000;
 	text-align: right;
 }
+
+/* RESUME */
+	#resume {
+		font-family: futura-pt, sans-serif;
+		font-weight: 300;
+		font-style: normal;
+		font-size: 1em;
+		color: #FFF;
+		margin: auto;
+		position: relative;
+		padding: 20px;
+	}
+
+	#resume h1 {
+		font-family: futura-pt-bold, sans-serif;
+		font-weight: 700;
+		font-style: normal;
+		font-size: 3.25em;
+		color: #000;
+		text-align: left;
+	}
+
+	#resume h2 {
+		font-family: futura-pt, sans-serif;
+		font-weight: 300;
+		font-style: normal;
+		font-size: 2em;
+		color: #000;
+	}
+
+	#resume p {
+		text-align: left;
+		color: #000;
+	  font-family: futura-pt, sans-serif;
+	  font-weight: 300;
+	  font-style: normal;
+	  font-size: 1.25em;
+	}
 
 /* Featured Works */
 #work {
@@ -541,7 +623,7 @@ footer {
 /* --------------- TABLET AND SMALL DESKTOP MEDIA QUERIES --------------- */
 
 @media (min-width: 481px) and (max-width: 1024px) {
-	body, #home img, #home, #work, #contact {
+	body, #home img, #about, #home, #work, #contact {
 		width: 100%;
 		height: 100%;
 		min-width: 481px;
@@ -639,7 +721,7 @@ iframe {
 /* --------------- NORMAL TO LARGE DESKTOP MEDIA QUERIES --------------- */
 
 @media (min-width: 1025px) and (max-width: 1920px) {
-	body, #home img, #home, #work, #contact {
+	body, #home img, #about, #home, #work, #contact {
 		width: 100%;
 		height: 100%;
 		min-width: 1025px;
