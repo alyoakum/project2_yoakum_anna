@@ -41,31 +41,31 @@
 
 <div class="gallery-row">
   <div class="gallery-column">
-    <img src="./images/gallery-1.jpg" alt="rainbow girl">
-    <img src="./images/gallery-2.jpg" alt="black and white figure">
-    <img src="./images/gallery-3.jpg" alt="donald glover">
-    <img src="./images/gallery-4.jpg" alt="aurora borealis">
-    <img src="./images/gallery-5.jpg" alt="arya stark">
-    <img src="./images/gallery-6.jpg" alt="self-portrait">
-    <img src="./images/gallery-7.jpg" alt="santa monica">
-		<img src="./images/gallery-22.jpg" alt="taylor swift">
-		<img src="./images/gallery-23.jpg" alt="emma watson">
+    <img src="./images/spinner.gif" data-src="./images/gallery-1.jpg" alt="rainbow girl">
+    <img src="./images/spinner.gif" data-src="./images/gallery-2.jpg" alt="black and white figure">
+    <img src="./images/spinner.gif" data-src="./images/gallery-3.jpg" alt="donald glover">
+    <img src="./images/spinner.gif" data-src="./images/gallery-4.jpg" alt="aurora borealis">
+    <img src="./images/spinner.gif" data-src="./images/gallery-5.jpg" alt="arya stark">
+    <img src="./images/spinner.gif" data-src="./images/gallery-6.jpg" alt="self-portrait">
+    <img src="./images/spinner.gif" data-src="./images/gallery-7.jpg" alt="santa monica">
+		<img src="./images/spinner.gif" data-src="./images/gallery-22.jpg" alt="taylor swift">
+		<img src="./images/spinner.gif" data-src="./images/gallery-23.jpg" alt="emma watson">
   </div>
   <div class="gallery-column">
-    <img src="./images/gallery-8.jpg" alt="smoke and mirrors">
-    <img src="./images/gallery-9.jpg" alt="the fault in our stars">
-    <img src="./images/gallery-10.jpg" alt="thick thighs save lives">
-		<img src="./images/gallery-11.jpg" alt="best friends">
-    <img src="./images/gallery-12.jpg" alt="wisteria">
-    <img src="./images/gallery-13.jpg" alt="leeloo">
+    <img src="./images/spinner.gif" data-src="./images/gallery-8.jpg" alt="smoke and mirrors">
+    <img src="./images/spinner.gif" data-src="./images/gallery-9.jpg" alt="the fault in our stars">
+    <img src="./images/spinner.gif" data-src="./images/gallery-10.jpg" alt="thick thighs save lives">
+		<img src="./images/spinner.gif" data-src="./images/gallery-11.jpg" alt="best friends">
+    <img src="./images/spinner.gif" data-src="./images/gallery-12.jpg" alt="wisteria">
+    <img src="./images/spinner.gif" data-src="./images/gallery-13.jpg" alt="leeloo">
   </div>
   <div class="gallery-column">
-    <img src="./images/gallery-15.jpg" alt="mermaid">
-    <img src="./images/gallery-16.jpg" alt="wine and grapes">
-    <img src="./images/gallery-17.jpg" alt="sepia dancer">
-    <img src="./images/gallery-18.jpg" alt="malala">
-    <img src="./images/gallery-19.jpg" alt="space princess">
-    <img src="./images/gallery-20.jpg" alt="fabulous hair">
+    <img src="./images/spinner.gif" data-src="./images/gallery-15.jpg" alt="mermaid">
+    <img src="./images/spinner.gif" data-src="./images/gallery-16.jpg" alt="wine and grapes">
+    <img src="./images/spinner.gif" data-src="./images/gallery-17.jpg" alt="sepia dancer">
+    <img src="./images/spinner.gif" data-src="./images/gallery-18.jpg" alt="malala">
+    <img src="./images/spinner.gif" data-src="./images/gallery-19.jpg" alt="space princess">
+    <img src="./images/spinner.gif" data-src="./images/gallery-20.jpg" alt="fabulous hair">
   </div>
 </div>
 
@@ -73,7 +73,16 @@
 	<footer>
 	  &copy; 2018 Anna Yoakum
 	</footer>
-
+<script>
+window.addEventListener('load', function(){
+    var allimages= document.getElementsByTagName('img');
+    for (var i=0; i<allimages.length; i++) {
+        if (allimages[i].getAttribute('data-src')) {
+            allimages[i].setAttribute('src', allimages[i].getAttribute('data-src'));
+        }
+    }
+}, false)
+</script>
 </body>
 
 
